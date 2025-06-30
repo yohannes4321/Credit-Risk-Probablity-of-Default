@@ -1,7 +1,6 @@
 
 # Credit Scoring Business Understanding 
 
-Credit Scoring Business Understanding
 ## 1. Influence of Basel II on Model Interpretability
 
 The Basel II Accord emphasizes accurate risk measurement and mandates that financial institutions using internal ratings-based (IRB) approaches to calculate capital requirements must have transparent, well-documented, and interpretable models. This requirement ensures that both regulators and internal risk managers can understand and validate the underlying assumptions, data, and methodologies used to estimate key risk parameters like Probability of Default (PD), Loss Given Default (LGD), and Exposure at Default (EAD). Interpretability is critical not just for compliance but also for maintaining trust, accountability, and auditability within the institution and among external stakeholders.
