@@ -1,5 +1,13 @@
 pandas
 numpy 
-
+xverse
+mlflow
 matplotlib
 seaborn
+linter
+scikit-learn
+fastapi
+uvicorn
+pytest
+flake8
+python-dateutil

@@ -1,0 +1,18 @@
+
+version: '3.8'
+
+services:
+  risk-api:
+    build: .
+    ports:
+      - "8000:80"
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow-server:5000
+    volumes:
+      - ./data:/app/data
+
+  mlflow-server:
+    image: mlflow/mlflow
+    ports:
+      - "5000:5000"
+    command: mlflow server --host 0.0.0.0
