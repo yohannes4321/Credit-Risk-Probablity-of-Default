@@ -1,12 +1,12 @@
 import mlflow
 import mlflow.sklearn
 import pandas as pd
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from xgboost import XGBClassifier
 from sklearn.metrics import classification_report, roc_auc_score
-
+from src.feature_engineering import create_preprocessing_pipeline,create_full_pipeline
 def train_models(X, y):
     """Train and evaluate models with hyperparameter tuning"""
     X_train, X_test, y_train, y_test = train_test_split(
@@ -50,7 +50,7 @@ def train_models(X, y):
             )
             
             # Hyperparameter tuning
-            search = GridSearchCV(
+            search = RandomizedSearchCV(
                 pipeline,
                 config['params'],
                 cv=3,
